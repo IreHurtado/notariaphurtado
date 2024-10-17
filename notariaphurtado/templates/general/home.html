@@ -1,0 +1,68 @@
+
+{% extends 'general/layout.html' %}
+
+{% block head_title %} Home {% endblock %}
+{% load static %}
+
+{% block page_title %}  {% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'estilos/home.css' %}">
+{% endblock %}
+
+{% block page_content %} 
+
+
+<div class="container">
+    <!-- Sección de texto a la izquierda -->
+    <div class="text-section">
+        <h1>Bienvenido a la Notaría Paul Hurtado</h1>
+        <div>
+            <p>Consulta los requisitos de tus trámites notariales y contacta con nosotros de manera rápida y sencilla a través de nuestra plataforma online. En la Notaría Paul Hurtado, trabajamos para ofrecerte una atención eficiente y personalizada, permitiéndote gestionar documentos importantes como compraventas, poderes, constituciones de sociedades, transferencias vehiculares y más, desde la comodidad de tu hogar.
+
+                Nuestro equipo está disponible para brindarte el apoyo necesario y guiarte en cada paso del proceso notarial. Te invitamos a ponerte en contacto con nosotros para resolver cualquier duda que puedas tener y asegurarnos de que tu trámite se complete sin contratiempos, de forma clara y segura.</p>
+        </div>
+    </div>
+
+    <!-- Carrusel de imágenes a la derecha -->
+    <div class="carousel">
+        <h2></h2>
+        <div class="carousel-images">
+            <img src="{% static 'images/image1.png' %}" alt="Imagen 1" style="width:100%;">
+            <img src="{% static 'images/image2.png' %}" alt="Imagen 2" style="width:100%; display:none;">
+            <img src="{% static 'images/image3.png' %}" alt="Imagen 3" style="width:100%; display:none;">
+        </div>
+    </div>
+</div>
+
+<!-- Sección de Ubicación, Contacto, y Redes Sociales alineadas en una fila -->
+<div class="info-section">
+    <div class="info-left">
+        <h3>Ubicación</h3>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.1416439946856!2d-79.00766262424591!3d-8.087034080862324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ad16111fa546d9%3A0xcf30e588fe93c5c5!2sNotaria%20Paul%20Hurtado!5e0!3m2!1ses!2ses!4v1728478429039!5m2!1ses!2ses"  
+            width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <div class="info-center">
+        <h3>Contacto</h3>
+        <p><img src="{% static 'images/phone-icon.png' %}" alt="Teléfono" class="icon"> 044 - 278165 </p>
+        <p><img src="{% static 'images/location-icon.png' %}" alt="Dirección" class="icon"> Manuel Ubalde 1060, El Porvenir</p>
+        <p><img src="{% static 'images/time-icon.png' %}" alt="Horario" class="icon"> Horario: L-V 9:00 - 18:00 / S 9:00 - 13:00 </p>
+    </div>
+
+    <div class="info-right">
+        <h3>Redes Sociales</h3>
+        <a href="https://wa.me/51939974364" target="_blank">
+            <img src="{% static 'images/wpp-icon.png' %}" alt="WhatsApp" class="icon"> Chatea con nosotros
+        </a>
+        <a href="https://www.facebook.com/notariaphurtado/" target="_blank">
+            <img src="{% static 'images/fb-icon.png' %}" alt="Facebook" class="icon"> Síguenos en Facebook
+        </a>
+    </div>
+</div>
+
+<script src="{% static 'js/carousel.js' %}"></script>
+
+{% endblock %}
+

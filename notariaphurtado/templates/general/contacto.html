@@ -1,0 +1,61 @@
+
+{% extends 'general/layout.html' %}
+
+{% block head_title %} Contáctanos {% endblock %}
+{% load static %}
+
+{% block page_title %}
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'estilos/contacto.css' %}">
+{% endblock %}
+
+{% block page_content %}
+
+
+<div class="contact-page">
+    <div class="contact-container">
+        <!-- Sección izquierda -->
+        <div class="left-side">
+            <h1>Contáctanos</h1>
+            <p>Conozca más y contáctenos a través de nuestros medios de comunicación, donde atenderemos cualquier consulta de manera rápida y eficiente.</p>
+            <img src="{% static 'images/contacto-imagen.png' %}" alt="Imagen de contacto" class="large-image"> <!-- Cambia el nombre de la imagen según sea necesario -->
+        </div>
+
+        <!-- Sección derecha -->
+        <div class="right-side">
+            <div class="info-center">
+                <h3>Contacto</h3>
+                <p><img src="{% static 'images/phone-icon.png' %}" alt="Teléfono" class="icon"> 044 - 278165</p>
+                <p><img src="{% static 'images/location-icon.png' %}" alt="Dirección" class="icon"> Manuel Ubalde 1060, El Porvenir</p>
+                <p><img src="{% static 'images/time-icon.png' %}" alt="Horario" class="icon"> Horario: L-V 9:00 - 18:00 S 9:00 - 13:00</p>
+            </div>
+            <div class="social-links">
+                <h3>Redes Sociales</h3>
+                <a href="https://wa.me/51939974364" target="_blank">
+                    <img src="{% static 'images/wpp-icon.png' %}" alt="WhatsApp" class="icon"> Chatea con nosotros
+                </a>
+                <a href="https://www.facebook.com/notariaphurtado/" target="_blank">
+                    <img src="{% static 'images/fb-icon.png' %}" alt="Facebook" class="icon"> Síguenos en Facebook
+                </a>
+            </div>
+            <div class="transparency-box">
+                <h3>Si tiene alguna duda, contacta con nosotros</h3>
+                <form method="POST" action="">  
+                    {% csrf_token %} 
+                    {{ formulario.as_p }}  
+                    <button type="submit">Enviar</button>  
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    {% if messages %}
+        alert("{% for message in messages %}{{ message }}{% if not forloop.last %} \\n {% endif %}{% endfor %}");
+    {% endif %}
+</script>
+
+{% endblock %}

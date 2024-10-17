@@ -1,0 +1,51 @@
+
+{% extends 'general/layout.html' %}
+
+{% block head_title %} No Contencioso {% endblock %}
+{% load static %}
+
+{% block page_title %}
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'estilos/escrituras.css' %}">
+{% endblock %}
+
+{% block page_content %}
+
+
+<div class="container-escrituras">
+    <!-- Izquierda: Título y Enlaces -->
+    <div class="left-section">
+        <h1>Asuntos No Contenciosos</h1>
+        <div class="box-left">
+            <a href="{% url 'nocontencioso:sucesiones' %}">Sucesión Intestada</a>
+            <a href="{% url 'nocontencioso:rectificacion' %}">Rectificación de Partidas</a>
+            <a href="{% url 'nocontencioso:union' %}">Unión de Hecho</a>
+            <a href="{% url 'nocontencioso:ceseunion' %}">Cese de Unión de Hecho</a>
+            <a href="{% url 'nocontencioso:divorcio' %}">Divorcio</a>
+            <a href="{% url 'nocontencioso:patrimoniofamiliar' %}">Constitución de Patrimonio Familiar</a>
+            <a href="{% url 'nocontencioso:adopcion' %}">Adopción de Personas Capaces</a>
+        </div>
+        <img src="{% static 'images/escrituras-imagen.png' %}" alt="Escrituras Imagen" class="escrituras-image">
+    </div>
+
+    <!-- Derecha: Requisitos -->
+    <div class="right-section">
+        <div class="box-right">
+            <h2>Adopción de Personas Capaces</h2>
+            <p class="requisitos-text">
+                <strong>Requisitos</strong><br><br>
+                1. La minuta firmada por los solicitantes y autorizada por abogado, debe contener las expresiones de voluntad del adoptante y del adoptado y el asentimiento de los respectivos cónyuges de ser el caso.<br><br>
+                2. Declaración jurada del adoptante respecto a que goza de solvencia. Esto como como parte integrante de la minuta.<br><br>
+                3. Copia certificada de la partida de nacimiento y de matrimonio del adoptante de ser el caso.<br><br>
+                4. Copia certificada de la partida de nacimiento y de matrimonio del adoptado de ser el caso.<br><br>
+                5. Documento que acredite que las cuentas de administración fueron aprobados, si el adoptante ha sido representante del adoptado. (Mediante declaración jurada).<br><br>
+                6. Testimonio del inventario de los bienes que tuviere el adoptado. En caso tuviera bienes.<br><br>
+               
+            </p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

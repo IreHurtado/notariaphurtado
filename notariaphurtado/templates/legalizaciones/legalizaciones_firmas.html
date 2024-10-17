@@ -1,0 +1,45 @@
+
+{% extends 'general/layout.html' %}
+
+{% block head_title %} Legalizaciones {% endblock %}
+{% load static %}
+
+{% block page_title %}
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'estilos/escrituras.css' %}">
+{% endblock %}
+
+{% block page_content %}
+
+
+<div class="container-escrituras">
+    <!-- Izquierda: Título y Enlaces -->
+    <div class="left-section">
+        <h1>Legalizaciones</h1>
+        <div class="box-left">
+            <a href="{% url 'legalizaciones:firma' %}">De Firmas</a>
+            <a href="{% url 'legalizaciones:pn' %}">De Libros de Persona Natural</a>
+            <a href="{% url 'legalizaciones:pj' %}">De Libros de Persona Jurídica</a>
+            <a href="{% url 'legalizaciones:copias' %}">De Copias</a>
+        </div>
+        <img src="{% static 'images/escrituras-imagen.png' %}" alt="Escrituras Imagen" class="escrituras-image">
+    </div>
+
+    <!-- Derecha: Requisitos -->
+    <div class="right-section">
+        <div class="box-right">
+            <h2>De Firmas</h2>
+            <p class="requisitos-text">
+                <strong>Requisitos</strong><br><br>
+                1. Presentarse a la Notaría con el documento original que se pretende legalizar.<br><br>
+                2. Documento de identidad original (DNI, Carné de extranjería, etc.), el DNI deberá contar con la constancia de votación al día, dispensa o pago de multas.<br><br>
+                3.  Si la legalización de firmas es con poder o en representación de una entidad, se requiere la vigencia de poder expedida por los Registros Públicos (no debe ser mayor a 30 días de antigüedad).<br><br>         
+               
+            </p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

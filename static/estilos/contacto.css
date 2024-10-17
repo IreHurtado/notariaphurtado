@@ -1,0 +1,198 @@
+.contact-page {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+   
+}
+
+.contact-container {
+    width: 90%;
+    margin: 20px auto;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between; 
+}
+
+.left-side {
+    flex: 1; 
+    margin-right: 20px; 
+}
+
+.right-side {
+    flex: 1; 
+    background-color: rgba(0, 0, 0, 0.6); 
+    padding: 20px;
+    border-radius: 10px; 
+    color: #dbe1e8; 
+}
+
+h1 {
+    font-size: 36px; 
+    margin-bottom: 10px; 
+    color: #dbe1e8; 
+}
+
+p {
+    font-size: 18px; 
+    margin-bottom: 20px; 
+    color: #dbe1e8; 
+}
+
+.large-image {
+    width: 100%; 
+    height: auto; 
+    border-radius: 10px; 
+}
+
+.info-center {
+    margin-bottom: 20px; 
+}
+
+.info-center h3 {
+    font-size: 24px; 
+    margin-bottom: 10px; 
+}
+
+.icon {
+    width: 20px; 
+    vertical-align: middle; 
+    margin-right: 10px; 
+}
+
+.social-links {
+    margin-bottom: 20px; 
+}
+
+.social-links a {
+    color: #dbe1e8; 
+    text-decoration: none; 
+    display: block; 
+    margin: 10px 0; 
+}
+
+button {
+    background-color: #007bff; 
+    color: #dbe1e8; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+
+button:hover {
+    background-color: #0056b3; 
+}
+
+/* Efecto de transparencia */
+.transparency-box {
+    background-color: rgba(0, 36, 104, 0.8); 
+    padding: 20px; 
+    border-radius: 10px; 
+    margin-top: 20px; 
+}
+
+/* Estilos generales del formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+    font-size: 16px; 
+}
+
+/* Estilos para los campos de entrada y textarea */
+input[type="text"], input[type="email"], textarea {
+    width: 100%; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f4f4f9; 
+    color: #333; 
+    box-sizing: border-box; 
+}
+
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    border-color: #007bff; 
+    outline: none; 
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
+}
+
+/* Estilo para textarea */
+textarea {
+    resize: vertical; 
+    min-height: 100px; 
+}
+
+/* Estilos para el botón de envío */
+button {
+    background-color: #007bff; 
+    color: #dbe1e8; 
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; 
+    text-align: center;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #0056b3; 
+}
+
+/* Estilos para las etiquetas */
+label {
+    font-weight: bold;
+    color: #dbe1e8; 
+}
+
+/* Para asegurar que el formulario sea responsivo */
+@media (max-width: 768px) {
+    form {
+        width: 100%; 
+    }
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column; 
+    }
+
+    .left-side, .right-side {
+        margin-right: 0; 
+        margin-bottom: 20px; 
+    }
+
+    h1 {
+        font-size: 28px; 
+    }
+
+    p {
+        font-size: 16px; 
+    }
+
+    .info-center h3 {
+        font-size: 20px; 
+    }
+}
+
+@media (max-width: 480px) {
+    button {
+        width: 100%; 
+    }
+
+    h1 {
+        font-size: 24px; 
+    }
+
+    .social-links a {
+        font-size: 14px; 
+    }
+
+    .info-center h3 {
+        font-size: 18px; 
+    }
+}

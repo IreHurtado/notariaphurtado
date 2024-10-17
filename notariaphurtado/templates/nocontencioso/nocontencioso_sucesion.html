@@ -1,0 +1,56 @@
+
+{% extends 'general/layout.html' %}
+
+{% block head_title %} No Contencioso {% endblock %}
+{% load static %}
+
+{% block page_title %}
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'estilos/escrituras.css' %}">
+{% endblock %}
+
+{% block page_content %}
+
+
+<div class="container-escrituras">
+    <!-- Izquierda: Título y Enlaces -->
+    <div class="left-section">
+        <h1>Asuntos No Contenciosos</h1>
+        <div class="box-left">
+            <a href="{% url 'nocontencioso:sucesiones' %}">Sucesión Intestada</a>
+            <a href="{% url 'nocontencioso:rectificacion' %}">Rectificación de Partidas</a>
+            <a href="{% url 'nocontencioso:union' %}">Unión de Hecho</a>
+            <a href="{% url 'nocontencioso:ceseunion' %}">Cese de Unión de Hecho</a>
+            <a href="{% url 'nocontencioso:divorcio' %}">Divorcio</a>
+            <a href="{% url 'nocontencioso:patrimoniofamiliar' %}">Constitución de Patrimonio Familiar</a>
+            <a href="{% url 'nocontencioso:adopcion' %}">Adopción de Personas Capaces</a>
+        </div>
+        <img src="{% static 'images/escrituras-imagen.png' %}" alt="Escrituras Imagen" class="escrituras-image">
+    </div>
+
+    <!-- Derecha: Requisitos -->
+    <div class="right-section">
+        <div class="box-right">
+            <h2>Sucesión Intestada</h2>
+            <p class="requisitos-text">
+                La solicitud firmada por el solicitante y autorizada por abogado colegiado.<br><br>
+                Requisitos<br><br>
+                La solicitud debe incluir:<br><br>
+                1. Nombre del causante.<br><br>
+                2. Indicación del último domicilio del causante.<br><br>
+                3. Copia certificada de la partida de defunción o de la declaración judicial de muerte presunta.<br><br>
+                4. Copia certificada  de la partida de nacimiento  del presunto  heredero  o herederos,  o documento público que contenga el reconocimiento o la declaración judicial, si se trata de hijo extramatrimonial o adoptivo.<br><br>
+                5. Partida de matrimonio o la inscripción en el Registro Personal de la declaración de la unión de hecho, adjuntándose, según sea el caso, el testimonio de la escritura pública o la copia certificada de la sentencia judicial firme.<br><br>
+                6. Relación de los bienes conocidos.<br><br>
+                7. Certificación Registral en la que conste que no hay inscrito testamento u otro proceso de sucesión intestada; en el lugar del último domicilio del causante y en aquel donde hubiera tenido bienes inscritos.<br><br>
+                8. Copia del documento de identidad del solicitante.<br><br>
+                9.  El solicitante debe acercarse a Notaría a pasar verificación biométrica. En caso alguna partida fuera de provincia, esta partida debe ser presentada a RENIEC para que legalicen la firma del registrador .<br><br>
+               
+            </p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

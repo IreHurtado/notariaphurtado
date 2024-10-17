@@ -1,0 +1,52 @@
+
+{% extends 'general/layout.html' %}
+
+{% block head_title %} Legalizaciones {% endblock %}
+{% load static %}
+
+{% block page_title %}
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'estilos/legalizacionlibro.css' %}">
+{% endblock %}
+
+{% block page_content %}
+
+
+<div class="container-escrituras">
+    <!-- Izquierda: Título y Enlaces -->
+    <div class="left-section">
+        <h1>Legalizaciones</h1>
+        <div class="box-left">
+            <a href="{% url 'legalizaciones:firma' %}">De Firmas</a>
+            <a href="{% url 'legalizaciones:pn' %}">De Libros de Persona Natural</a>
+            <a href="{% url 'legalizaciones:pj' %}">De Libros de Persona Jurídica</a>
+            <a href="{% url 'legalizaciones:copias' %}">De Copias</a>
+        </div>
+        <img src="{% static 'images/escrituras-imagen.png' %}" alt="Escrituras Imagen" class="escrituras-image">
+    </div>
+
+    <!-- Derecha: Requisitos -->
+    <div class="right-section">
+        <div class="box-right">
+            <h2>De Libros de Persona Natural</h2>
+            <p class="requisitos-text">
+                <strong>Requisitos</strong><br><br>
+                1. Solicitud firmada por el Titular.<br><br>
+                2. Copia Ficha RUC.<br><br>
+                3. Copia del DNI vigente. <br><br>    
+            </p>
+        </div>
+
+        <div class="box-right">
+            <p class="requisitos-text">
+                <strong>Importante</strong><br><br>
+                En caso fuera un segundo libro a legalizar, se debe acreditar la conclusión (Adjuntando la primera y última hoja del libro culminado) o pérdida del libro anterior
+                (Denuncia Policial original donde se precise el nombre del libro, número, fecha y nombre de la notaría donde se legalizó).<br><br>    
+            </p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

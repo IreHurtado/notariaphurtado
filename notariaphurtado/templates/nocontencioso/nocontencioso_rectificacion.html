@@ -1,0 +1,53 @@
+
+{% extends 'general/layout.html' %}
+
+{% block head_title %} No Contencioso {% endblock %}
+{% load static %}
+
+{% block page_title %}
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'estilos/escrituras.css' %}">
+{% endblock %}
+
+{% block page_content %}
+
+
+<div class="container-escrituras">
+    <!-- Izquierda: Título y Enlaces -->
+    <div class="left-section">
+        <h1>Asuntos No Contenciosos</h1>
+        <div class="box-left">
+            <a href="{% url 'nocontencioso:sucesiones' %}">Sucesión Intestada</a>
+            <a href="{% url 'nocontencioso:rectificacion' %}">Rectificación de Partidas</a>
+            <a href="{% url 'nocontencioso:union' %}">Unión de Hecho</a>
+            <a href="{% url 'nocontencioso:ceseunion' %}">Cese de Unión de Hecho</a>
+            <a href="{% url 'nocontencioso:divorcio' %}">Divorcio</a>
+            <a href="{% url 'nocontencioso:patrimoniofamiliar' %}">Constitución de Patrimonio Familiar</a>
+            <a href="{% url 'nocontencioso:adopcion' %}">Adopción de Personas Capaces</a>
+        </div>
+        <img src="{% static 'images/escrituras-imagen.png' %}" alt="Escrituras Imagen" class="escrituras-image">
+    </div>
+
+    <!-- Derecha: Requisitos -->
+    <div class="right-section">
+        <div class="box-right">
+            <h2>Rectificación de Partidas</h2>
+            <p class="requisitos-text">
+                Las rectificaciones que tengan por objeto corregir los errores y omisiones de nombre, apellidos, fecha de nacimiento, de matrimonio, defunción u otros que resulten evidentes del tenor de la propia partida o de otros documentos probatorios, se tramitarán ante un notario.<br><br>
+                Requisitos<br><br>
+                La minuta precisara el objeto del pedido y se acompañara la partida que se pretende rectificar y la partida de sustento que acredite fehacientemente su pedido.<br><br>
+                Anexos:<br><br>
+                1. Partida Errada.<br><br>
+                2. Partida de sustento.<br><br>
+                3. Copia del documento de identidad del solicitante.<br><br>
+                En caso alguna partida sea emitida en provincia, esta deber ser presentada a RENIEC para que se legalice la firma del registrador en ella. En caso la prueba sea una partida de bautizo esta debe estar legalizada por el notario eclesiástico de la localidad.<br><br>
+                
+               
+            </p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,53 @@
+
+{% extends 'general/layout.html' %}
+
+{% block head_title %} Escrituras {% endblock %}
+{% load static %}
+
+{% block page_title %}
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'estilos/escrituras.css' %}">
+{% endblock %}
+
+{% block page_content %}
+
+
+<div class="container-escrituras">
+    <!-- Izquierda: Título y Enlaces -->
+    <div class="left-section">
+        <h1>Escrituras Públicas</h1>
+        <div class="box-left">
+            <a href="{% url 'escrituras:compraventa' %}">Compraventa - Donación - Cesión - Transferencia</a>
+            <a href="{% url 'escrituras:poderes' %}">Poderes</a>
+            <a href="{% url 'escrituras:sociedades' %}">Constitución de Sociedades</a>
+            <a href="{% url 'escrituras:hipoteca' %}">Constitución de Hipotecas</a>
+            <a href="{% url 'escrituras:matrimonio' %}">Matrimonio</a>
+        </div>
+        <img src="{% static 'images/escrituras-imagen.png' %}" alt="Escrituras Imagen" class="escrituras-image">
+    </div>
+
+    <!-- Derecha: Requisitos -->
+    <div class="right-section">
+        <div class="box-right">
+            <h2>Compraventa - Donación - Cesión - Transferencia</h2>
+            <p class="requisitos-text">
+                <strong>Requisitos</strong><br><br>
+                1. Minuta firmada por vendedores y compradores, debidamente autorizada por un abogado.<br><br>
+                2. Copia del Autoavaluo (HR y PU)<br><br>
+                3. Copia de los recibos del pago anual del Impuesto Predial y/o constancia de No Adeudo.<br><br>
+                4. Copia literal de la Partida Registral del Inmueble.<br><br>
+                5. Copia de los documentos de identidad vigentes, sin multas por omisión al sufragio.<br><br>
+                6. Vigencia de poder (en el caso que intervenga una empresa o apoderado de persona natural).<br><br>
+                7. Pago del Impuesto de Alcabala. Se puede realizar en la Notaría para Inmuebles de Lima Metropolitana.<br><br>
+                8. Pago de Impuesto a la Renta según corresponda, previa calificación del contrato.<br><br>
+                9. Medios de pago en caso corresponda a la operación.<br><br>
+                10. Otros documentos que sean necesarios luego de la calificación y revisión de la minuta.<br><br>
+                El vendedor y el comprador deben presentar ante la municipalidad correspondiente, el cargo y descargo de la compra y venta y/o transferencia de inmueble, se realiza hasta el último día del mes siguiente de la fecha de la minuta.
+            </p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

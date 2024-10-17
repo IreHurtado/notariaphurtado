@@ -1,0 +1,49 @@
+
+{% extends 'general/layout.html' %}
+
+{% block head_title %} No Contencioso {% endblock %}
+{% load static %}
+
+{% block page_title %}
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'estilos/escrituras.css' %}">
+{% endblock %}
+
+{% block page_content %}
+
+<div class="container-escrituras">
+    <!-- Izquierda: Título y Enlaces -->
+    <div class="left-section">
+        <h1>Asuntos No Contenciosos</h1>
+        <div class="box-left">
+            <a href="{% url 'nocontencioso:sucesiones' %}">Sucesión Intestada</a>
+            <a href="{% url 'nocontencioso:rectificacion' %}">Rectificación de Partidas</a>
+            <a href="{% url 'nocontencioso:union' %}">Unión de Hecho</a>
+            <a href="{% url 'nocontencioso:ceseunion' %}">Cese de Unión de Hecho</a>
+            <a href="{% url 'nocontencioso:divorcio' %}">Divorcio</a>
+            <a href="{% url 'nocontencioso:patrimoniofamiliar' %}">Constitución de Patrimonio Familiar</a>
+            <a href="{% url 'nocontencioso:adopcion' %}">Adopción de Personas Capaces</a>
+        </div>
+        <img src="{% static 'images/escrituras-imagen.png' %}" alt="Escrituras Imagen" class="escrituras-image">
+    </div>
+
+    <!-- Derecha: Requisitos -->
+    <div class="right-section">
+        <div class="box-right">
+            <h2>Constitución de Patrimonio Familiar</h2>
+            <p class="requisitos-text">
+                <strong>Requisitos</strong><br><br>
+                1. Minuta suscrita por las partes y autorizada por abogado colegiado, la minuta deberá contener la declaración expresa de no tener deudas pendientes de pago, individualizando el predio que se propone afectar y a los respectivos beneficiarios.<br><br>
+                2. Partidas que acrediten el vínculo entre el solicitante y los beneficiarios.<br><br>
+                3. Copia literal del inmueble actualizada y certificado de cargas y gravámenes del predio.<br><br>
+                
+               
+               
+            </p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

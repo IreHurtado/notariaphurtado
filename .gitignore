@@ -1,0 +1,48 @@
+# Archivos de entorno
+.env
+
+# Archivos del sistema
+*.log
+*.pot
+*.pyc
+*.pyo
+*.swp
+*.sqlite3
+
+# Directorios de dependencias
+venv/
+env/
+__pycache__/
+*.egg-info/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Archivos creados por editores de código
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Archivos de bases de datos locales
+db.sqlite3
+
+# Archivos generados por coverage
+htmlcov/
+.coverage
+.coverage.*
+
+# Archivos y directorios de medios subidos por los usuarios
+media/
+
+# Archivos de migraciones de Django
+*/migrations/__pycache__/
+*/migrations/*.pyc
+
+# Archivos y carpetas de Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Archivos de compilación
+dist/
+build/

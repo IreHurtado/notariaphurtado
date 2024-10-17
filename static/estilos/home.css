@@ -1,0 +1,109 @@
+    /* Contenedor principal que alberga el texto y el carrusel */
+    .container {
+        display: flex;
+        justify-content: space-around;
+        padding: 20px;
+        align-items: flex-start;
+    }
+    
+    .text-section {
+        color: #dbe1e8;
+        font-size: 20px;
+        padding: 30px;
+        width: 30%; 
+        text-align: justify;
+    }
+    
+    .carousel {
+        width: 33%; 
+    }
+   
+    /* Sección de Ubicación, Contacto, y Redes Sociales alineadas en una fila */
+    .info-section {
+        display: flex;
+        justify-content: center; 
+        padding: 20px;
+        gap: 180px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        max-width: 1200px; 
+        margin-left: auto; 
+        margin-right: auto; 
+    }
+    
+    .info-left, .info-center, .info-right {
+        width: 30%; 
+        color: #83a5dd;
+        margin: 0 15px; 
+        box-sizing: border-box; 
+    }
+    
+    .info-left iframe, .info-right, .info-center {
+        text-align: left;
+        color: #83a5dd;
+    }
+
+/* Estilo para iconos y texto en la sección de contacto */
+.icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+/* Ajuste para los enlaces de redes sociales */
+.info-right a {
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #83a5dd;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.info-right img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .text-section, .carousel {
+        width: 100%; 
+        margin-bottom: 20px; 
+    }
+
+    .info-section {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .info-left, .info-center, .info-right {
+        width: 100%; 
+        margin-bottom: 20px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .text-section {
+        font-size: 20px; 
+    }
+
+    .carousel img {
+        width: 100%; 
+    }
+
+    .info-section {
+        padding: 10px; 
+    }
+
+    .info-right a {
+        font-size: 14px; 
+    }
+}

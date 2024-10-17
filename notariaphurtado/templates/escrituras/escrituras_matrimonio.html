@@ -1,0 +1,52 @@
+
+{% extends 'general/layout.html' %}
+
+{% block head_title %} Escrituras {% endblock %}
+{% load static %}
+
+{% block page_title %}
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'estilos/escrituras.css' %}">
+{% endblock %}
+
+{% block page_content %}
+
+
+<div class="container-escrituras">
+    <!-- Izquierda: Título y Enlaces -->
+    <div class="left-section">
+        <h1>Escrituras Públicas</h1>
+        <div class="box-left">
+            <a href="{% url 'escrituras:compraventa' %}">Compraventa - Donación - Cesión - Transferencia</a>
+            <a href="{% url 'escrituras:poderes' %}">Poderes</a>
+            <a href="{% url 'escrituras:sociedades' %}">Constitución de Sociedades</a>
+            <a href="{% url 'escrituras:hipoteca' %}">Constitución de Hipotecas</a>
+            <a href="{% url 'escrituras:matrimonio' %}">Matrimonio</a>
+        </div>
+        <img src="{% static 'images/escrituras-imagen.png' %}" alt="Escrituras Imagen" class="escrituras-image">
+    </div>
+
+    <!-- Derecha: Requisitos -->
+    <div class="right-section">
+        <div class="box-right">
+            <h2>Matrimonio</h2>
+            <p class="requisitos-text">
+                <strong>Requisitos</strong><br><br>
+                1. Solicitud de Matrimonio: Completar y presentar la solicitud de matrimonio dirigida a la notaría.<br><br>
+                2. Copia del Documento de Identidad: Ambos contrayentes deben presentar una copia de su DNI vigente o documento de identidad equivalente (carné de extranjería, pasaporte).<br><br>
+                3. Certificado de Nacimiento: Copia certificada reciente (no mayor a tres meses) del acta de nacimiento de ambos contrayentes.<br><br>
+                4. Declaración de Soltería: Documento que acredite que ambos contrayentes no están casados, expedido por la RENIEC u otra entidad competente.<br><br>
+                5. Certificado Médico Prenupcial: Examen médico emitido por un centro de salud autorizado que certifique que ambos contrayentes no tienen impedimentos de salud para casarse.<br><br>
+                6. Testigos: Dos testigos mayores de edad, con copia de su DNI vigente, que acrediten la voluntad de los contrayentes para contraer matrimonio. <br><br>
+                7. Publicación de Edictos: La notaría se encargará de la publicación de edictos para informar sobre la intención de matrimonio, con un plazo de ocho días previos a la ceremonia.<br><br>
+                8. Declaración Jurada de Domicilio: Documento que acredite el domicilio actual de ambos contrayentes.<br><br>
+                9. Otros Documentos en Casos Específicos: Si alguno de los contrayentes es divorciado, viudo o extranjero, se deberán presentar documentos adicionales, como la partida de divorcio o defunción del cónyuge, según corresponda.<br><br>      
+               
+            </p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

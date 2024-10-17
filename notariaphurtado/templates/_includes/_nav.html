@@ -1,0 +1,38 @@
+<header>
+    {% load static %}
+    <!-- Logo -->
+    <img src="{% static 'images/logo.png' %}" alt="Logo" class="logo">
+
+     <!-- Ícono de hamburguesa -->
+     <div class="menu-icon" onclick="toggleMenu()">
+        &#9776; <!-- Ícono de hamburguesa (Unicode) -->
+    </div>
+
+    <!-- Menú de navegación -->
+    <nav class="nav">
+        <div class="nav-links">
+            <div><a href="{% url 'home' %}">Inicio</a></div>
+            <div><a href="{% url 'nosotros' %}">Quiénes Somos</a></div>
+
+            <!-- Menú desplegable para "Servicios Notariales" -->
+            <div class="dropdown">
+                <a href="javascript:void(0);" class="dropbtn">Servicios Notariales</a>
+                <div class="dropdown-content">
+                    <div><a href="{% url 'escrituras:compraventa' %}">Escrituras Públicas</a></div>
+                    <div><a href="{% url 'nocontencioso:sucesiones' %}">Asuntos No Contenciosos</a></div>
+                    <div><a href="{% url 'vehicular:transferenciavehicular' %}">Transferencias Vehiculares</a></div>
+                    <div><a href="{% url 'cartas:cartasnotariales' %}">Cartas Notariales</a></div>
+                    <div><a href="{% url 'autorizaciones:viaje' %}">Autorizaciones de viaje</a></div>
+                    <div><a href="{% url 'poderes:poderesfueraregistro' %}">Poderes Fuera de Registro</a></div>
+                    <div><a href="{% url 'legalizaciones:firma' %}">Legalizaciones</a></div>
+                </div>
+            </div>
+
+            <div><a href="{% url 'contacto' %}">Contáctanos</a></div>
+            <div><a href="https://elecfact.com">Facturación Electrónica</a></div>
+        </div>
+    </nav>
+</header>
+<link rel="stylesheet" href="{% static 'estilos/nav.css' %}">
+
+<script src="{% static 'js/nav.js' %}"></script>

@@ -1,0 +1,41 @@
+
+{% extends 'general/layout.html' %}
+{% load static %}
+
+{% block head_title %} Carta Notarial 
+{% endblock %}
+{% block page_title %}
+{% endblock %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'estilos/cartas.css' %}">
+{% endblock %}
+{% block page_content %}
+
+
+<div class="container-escrituras">
+    <!-- Izquierda: Título y Enlaces -->
+    <div class="left-section">
+        <h1>Cartas Notariales</h1>
+        <div class="box-left">
+            <strong>ORDINARIA:</strong><br><br>
+            Diligencia en 48 horas.<br><br>
+            <strong>URGENTE:</strong><br><br>
+            Diligencia en 24 horas.<br><br>
+        </div>
+        <img src="{% static 'images/escrituras-imagen.png' %}" alt="Escrituras Imagen" class="escrituras-image">
+    </div>
+
+    <!-- Derecha: Requisitos -->
+    <div class="right-section">
+        <div class="box-right">
+            <p class="requisitos-text">
+                <strong>Requisitos:</strong><br><br>
+                1. Presentar dos (2) cartas originales debidamente firmadas y una (1) copia.<br><br>
+                2. Indicar claramente dirección, nombre o razón social del destinatario. <br><br> 
+            </p> 
+        </div>
+    </div>
+    </div>
+</div>
+
+{% endblock %}

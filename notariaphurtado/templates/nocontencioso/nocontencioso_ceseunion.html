@@ -1,0 +1,58 @@
+
+{% extends 'general/layout.html' %}
+
+{% block head_title %} No Contencioso {% endblock %}
+{% load static %}
+
+{% block page_title %}
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'estilos/escrituras.css' %}">
+{% endblock %}
+
+{% block page_content %}
+
+
+</style>
+
+<div class="container-escrituras">
+    <!-- Izquierda: Título y Enlaces -->
+    <div class="left-section">
+        <h1>Asuntos No Contenciosos</h1>
+        <div class="box-left">
+            <a href="{% url 'nocontencioso:sucesiones' %}">Sucesión Intestada</a>
+            <a href="{% url 'nocontencioso:rectificacion' %}">Rectificación de Partidas</a>
+            <a href="{% url 'nocontencioso:union' %}">Unión de Hecho</a>
+            <a href="{% url 'nocontencioso:ceseunion' %}">Cese de Unión de Hecho</a>
+            <a href="{% url 'nocontencioso:divorcio' %}">Divorcio</a>
+            <a href="{% url 'nocontencioso:patrimoniofamiliar' %}">Constitución de Patrimonio Familiar</a>
+            <a href="{% url 'nocontencioso:adopcion' %}">Adopción de Personas Capaces</a>
+        </div>
+        <img src="{% static 'images/escrituras-imagen.png' %}" alt="Escrituras Imagen" class="escrituras-image">
+    </div>
+
+    <!-- Derecha: Requisitos -->
+    <div class="right-section">
+        <div class="box-right">
+            <h2>Cese de Unión de Hecho</h2>
+            <p class="requisitos-text">
+                <strong>Requisitos</strong><br><br>
+                Presentar minuta firmada por ambas partes y autorizada por abogado.<br><br>
+                La minuta debe indicar:<br><br>
+                - Nombres, apellidos y documentos de identidad de los solicitantes.<br><br>
+                - Reconocimiento expreso de haber puesto fin a su estado de convivencia, consignando la fecha exacta a partir de la cual no conviven.<br><br>
+                - La indicación de la Partida Electrónica en la que corre registrada su convivencia.<br><br>
+                - De ser el caso, la liquidación del patrimonio social.<br><br>
+                Documentos a adjuntar: <br><br>
+                1. Copia literal de la Partida Electrónica en la que corre registrada su convivencia.<br><br>
+                2. Copias de DNIs de los solicitantes.<br><br>
+                3. En caso de haber bienes, se solicitará los documentos adicionales que correspondan.<br><br>
+               
+               
+            </p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

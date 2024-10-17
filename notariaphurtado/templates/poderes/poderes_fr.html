@@ -1,0 +1,46 @@
+
+{% extends 'general/layout.html' %}
+
+{% block head_title %} Poderes Fuera de Registro {% endblock %}
+{% load static %}
+
+{% block page_title %}
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'estilos/poderfr.css' %}">
+{% endblock %}
+
+{% block page_content %}
+
+
+<div class="container-escrituras">
+    <!-- Izquierda: Título y Enlaces -->
+    <div class="left-section">
+        <h1>Poderes Fuera de Registro</h1>
+        <div class="box-left">
+            Los poderes fuera de registro son documentos mediante los cuales una persona (el poderdante) autoriza a otra (el apoderado) a realizar actos o decisiones en su nombre. A diferencia de los poderes inscritos en registros públicos, que son utilizados para actos formales como la venta de inmuebles, los poderes fuera de registro no requieren su inscripción en el Registro de Personas Jurídicas.
+            Estos poderes suelen utilizarse para gestiones de menor envergadura, como trámites administrativos, gestiones bancarias o representación en procedimientos no necesariamente judiciales o de alto impacto patrimonial. Aunque no se inscriben, deben ser redactados con claridad y por lo que son otorgados ante notario para otorgarles mayor formalidad y validez.<br><br>
+        </div>
+        <img src="{% static 'images/escrituras-imagen.png' %}" alt="Escrituras Imagen" class="escrituras-image">
+    </div>
+
+    <!-- Derecha: Requisitos -->
+    <div class="right-section">
+        <div class="box-right">
+            <p class="requisitos-text">
+                <strong>Requisitos:</strong><br><br>
+                1. Presentar documento de identidad de poderdante.<br><br>
+                2. Presentar documento de identidad de apoderado.<br><br>
+                <strong>Tipos de Poderes:</strong><br><br>
+                1. Poder Fuera de Registro<br><br>
+                2. Poder Fuera de Registro para cobro de pensión en ONP<br><br>
+                3. Poder Fuera de Registro para cobro de pensión en el Banco de la Nación<br><br>
+
+            </p>
+        </div>
+    </div>
+    </div>
+</div>
+
+{% endblock %}

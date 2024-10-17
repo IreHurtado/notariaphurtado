@@ -1,0 +1,163 @@
+
+{% extends 'general/layout.html' %}
+
+{% block head_title %} Quiénes Somos {% endblock %}
+{% load static %}
+
+{% block page_title %}
+ 
+{% endblock %}
+
+{% block page_content %}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(90deg, rgba(126, 147, 183, 1) 0%, rgba(1, 36, 104, 0.823) 35%);
+    }
+    .container {
+        width: 90%;
+        margin: 20px auto;
+        padding: 30px;
+    }
+    
+    /* Estilos para la sección principal utilizando Grid */
+    .section {
+        display: grid;
+        grid-template-areas: 
+            "text-content image-gallery"
+            "image-left info-boxes"; 
+        grid-template-columns: 1fr 1fr; 
+        grid-gap: 20px; 
+        padding: 40px 0;
+        background-color: rgba(0, 0, 0, 0.6); 
+        border-radius: 10px; 
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    }
+    
+    .text-content {
+        grid-area: text-content; 
+        color: #dbe1e8; 
+        font-size: 20px;
+        margin: 20px;
+        text-align: justify;
+        
+    }
+    
+    .image-gallery {
+        grid-area: image-gallery; 
+        display: flex; 
+        gap: 10px; 
+    }
+    
+    .image-gallery img {
+        width: 30%;
+        height: auto; 
+        border-radius: 10px; 
+    }
+    
+    .image-left {
+        grid-area: image-left; 
+    }
+    
+    .image-left img {
+        width: 80%; 
+        height: auto; 
+        margin: 20px;
+        border-radius: 10px;
+        padding: 30px;
+    }
+    
+    /* Área para las cajas de información */
+    .info-boxes {
+        grid-area: info-boxes;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+        padding-right: 20px; 
+    }
+    
+    /* Estilos para los info-boxes individuales */
+    .info-box {
+        background-color: rgba(0, 0, 0, 0.6); 
+        color: #dbe1e8; 
+        padding: 20px; 
+        border-radius: 10px; 
+        text-align: justify;
+    }
+    
+    /* Ajustes responsivos */
+    @media (max-width: 768px) {
+        .section {
+            grid-template-areas: 
+                "text-content"
+                "image-gallery"
+                "image-left"
+                "info-boxes"; 
+        }
+    
+        .info-boxes {
+            grid-template-columns: 1fr; 
+        }
+    
+        .image-left,
+        .info-right {
+            width: 100%; 
+        }
+    }
+</style>
+
+<div class="container">
+    <!-- Primera sección: Texto a la izquierda, imágenes a la derecha -->
+    <div class="section">
+        <div class="text-content">
+            <h2>Nosotros</h2>
+            <p>
+                Descubra más acerca de la Notaría Paul Hurtado, una institución comprometida con brindar un servicio notarial de excelencia. Con años de experiencia y trayectoria, hemos consolidado un equipo de profesionales dedicados a ofrecer soluciones rápidas, eficientes y transparentes para todos nuestros clientes.
+                Conozca nuestra historia y cómo hemos crecido a lo largo del tiempo, guiados por nuestros valores fundamentales de integridad, compromiso y responsabilidad. Nuestras metas como institución están enfocadas en brindarte la confianza que necesitas para gestionar tus trámites notariales con total seguridad y confianza. Estamos aquí para ayudarte en cada paso del camino.
+            </p>
+        </div>
+
+        <div class="image-gallery">
+            <img src="{% static 'images/nosotros1.png' %}" alt="Imagen 1">
+            <img src="{% static 'images/nosotros2.png' %}" alt="Imagen 2">
+            <img src="{% static 'images/nosotros3.png' %}" alt="Imagen 3">
+        </div>
+
+        <!-- Imagen ocupando la mitad izquierda -->
+        <div class="image-left">
+            <img src="{% static 'images/nosotros-grande.png' %}" alt="Nuestra historia">
+        </div>
+
+        <!-- Sección que contiene las cajas de información, dividida en 2 columnas -->
+        <div class="info-boxes">
+            <div class="info-box">
+                <h3>Misión</h3>
+                <p>
+                    Ofrecemos servicios jurídicos confiables, oportunos y de calidad, con soluciones integrales e innovadoras, adaptadas a cada cliente. Nuestra misión es brindar asesoría legal que no solo resuelva problemas actuales, sino que también anticipe y prevenga futuros desafíos, contribuyendo así al bienestar y éxito de nuestros clientes. Actuamos con un enfoque ético, profesional y siempre con la responsabilidad social en mente, buscando el beneficio tanto de nuestros clientes como de la comunidad.
+                </p>
+            </div>
+            <div class="info-box">
+                <h3>Visión</h3>
+                <p>
+                    Nuestra visión es convertirnos en una firma de referencia a nivel nacional, reconocida por la excelencia en nuestros servicios, la cercanía con nuestros clientes y la capacidad de innovar dentro del sector legal. Creemos en la creación de relaciones de confianza a largo plazo, construidas sobre la base de resultados satisfactorios y un compromiso constante con la calidad. Nos esforzamos por liderar el cambio y adaptarnos a las nuevas tendencias y tecnologías para seguir siendo una firma moderna y avanzada en todos los aspectos.
+                </p>
+            </div>
+            <div class="info-box">
+                <h3>Nuestros Valores</h3>
+                <p>
+                    Comprometidos con la confianza, la seguridad jurídica y la innovación, nuestros valores guían cada acción que tomamos. La integridad, el respeto y la transparencia son pilares fundamentales de nuestra filosofía de trabajo. Fomentamos la colaboración tanto dentro de nuestro equipo como con nuestros clientes, buscando soluciones personalizadas que sean efectivas y eficientes. Además, promovemos la mejora continua, no solo en nuestras habilidades técnicas, sino también en nuestro impacto positivo en la sociedad.
+                </p>
+            </div>
+            <div class="info-box">
+                <h3>Nuestra Filosofía</h3>
+                <p>
+                    Nuestra filosofía se basa en la convicción de que el éxito de nuestros clientes es nuestro propio éxito. Creemos en una práctica del derecho que esté centrada en las personas, donde cada cliente es tratado con el respeto y la atención que merece. Nos esforzamos por entender las necesidades específicas de cada caso para ofrecer soluciones legales que no solo resuelvan los problemas inmediatos, sino que también impulsen el crecimiento y la estabilidad a largo plazo. Todo ello con una profunda vocación de servicio.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

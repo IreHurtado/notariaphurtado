@@ -1,0 +1,60 @@
+
+{% extends 'general/layout.html' %}
+
+{% block head_title %} Vehicular {% endblock %}
+{% load static %}
+
+{% block page_title %}
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'estilos/vehicular.css' %}">
+{% endblock %}
+
+{% block page_content %}
+
+
+<div class="container-escrituras">
+    <!-- Izquierda: Título y Enlaces -->
+    <div class="left-section">
+        <h1>Transferencias Vehiculares</h1>
+        <div class="box-left">
+            Deberán estar presentes comprador(es) y vendedor(es) conjuntamente.
+        </div>
+        <img src="{% static 'images/escrituras-imagen.png' %}" alt="Escrituras Imagen" class="escrituras-image">
+    </div>
+
+    <!-- Derecha: Requisitos -->
+    <div class="right-section">
+        <div class="box-right">
+            <p class="requisitos-text">
+                <strong>Documentos del vehículo:</strong><br><br>
+                Tarjeta de identificación vehicular y SOAT (físico o virtual).<br><br>
+                <strong>Identificación de las partes:</strong><br><br>
+                Nacionales: DNI vigente de los firmantes y al día con las últimas votaciones.<br><br>
+                Extranjeros: Carné de extranjería vigente, Carné de permiso temporal de permanencia (CPP), pasaporte con el respectivo permiso especial para suscribir documentos.<br><br>
+                <strong>En caso de intervención de Persona Jurídica:</strong><br><br>
+                El/los representante/s debe/n presentar su vigencia de poder o copia literal de la empresa actualizada (no mayor a 30 días de antigüedad), donde conste su nombramiento y facultades específicas para el acto jurídico que desean celebrar.<br><br>
+                De igual forma cuando una persona natural es representado por otro:<br><br>
+                Debe adjuntar la vigencia de poder no mayor a 30 días de antigüedad.<br><br>
+                <strong>Pago de impuesto vehicular cancelado en su integridad:</strong><br><br>
+                Los 3 años afectos (4 trimestres en cada uno), contados a partir del año siguiente de la inscripción en la Municipalidad Provincial del domicilio del titular; respecto de quien mantuvo la condición de contribuyente, de conformidad al Decreto Legislativo Nº 1520, que modifica la Ley de Tributación Municipal.<br><br>
+                <strong>Precio de venta y forma de pago:</strong><br><br>
+                Si el precio de venta es mayor a una (1) UIT, necesariamente deben acreditar medio de pago (cheque, depósito, transferencia bancaria).<br><br>
+            </p>
+            
+        </div>
+        <div class="box-right">
+            <p class="requisitos-text">
+                <strong>Nota:</strong><br><br>
+                De conformidad con el Decreto Legislativo 1529, el pago debe realizarse siempre al titular del bien a transferir. Excepcionalmente, si el medio de pago se emite a nombre de un tercero, deberá acreditar, previo al pago, el cargo de comunicación respectivo a la SUNAT.<br><br>
+                <strong>Importante:</strong><br><br>
+                Si los contratantes presentan el régimen de separación de patrimonios o unión de hecho, deben poner en conocimiento a la Notaría tal situación
+                y adjuntar la inscripción registral respectiva.<br><br>
+            </p>
+        </div>
+    </div>
+    </div>
+</div>
+
+{% endblock %}

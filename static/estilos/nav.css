@@ -1,0 +1,132 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #244174; /* Fondo del header */
+    padding: 15px 30px;
+}
+
+/* Logo más grande y alineado a la izquierda */
+.logo {
+    width: 400px; /* Tamaño del logo */
+}
+
+/* Estilo de navegación */
+.nav {
+    display: flex; /* Para mantener los elementos en una fila */
+    justify-content: flex-end; /* Justificar a la derecha */
+}
+
+/* Contenedor de enlaces del menú */
+.nav-links {
+    display: flex; /* Mantener los enlaces en una sola fila */
+    align-items: center; /* Alinear verticalmente */
+}
+
+/* Estilo para cada enlace en el menú */
+.nav-links div {
+    margin-left: 10px; /* Espacio entre botones */
+}
+
+.nav-links div a,
+.dropdown .dropbtn {
+    display: inline-block; /* Mantener los enlaces como botones */
+    background-color: #dbe1e8; /* Color de fondo claro */
+    color: #012468; /* Color del texto */
+    padding: 12px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease;
+    text-decoration: none; /* Sin subrayado */
+    font-weight: bold; /* Negrita */
+    font-size: 16px; /* Tamaño de fuente */
+    text-align: center; /* Centrar texto */
+}
+
+/* Cambiar color al pasar el ratón */
+.nav-links div a:hover,
+.dropdown .dropbtn:hover {
+    background-color: #7e93b7; /* Fondo oscuro al hacer hover */
+    color: #dbe1e8; /* Texto claro */
+}
+
+/* Estilos del menú desplegable */
+.dropdown {
+    position: relative; /* Para contener el dropdown */
+}
+
+.dropdown-content {
+    display: none; /* Oculto por defecto */
+    position: absolute; /* Posicionamiento absoluto */
+    background-color: #dbe1e8; /* Fondo del dropdown */
+    border-radius: 5px; /* Bordes redondeados */
+    z-index: 3; /* Para que esté por encima de otros elementos */
+    top: 100%; /* Para que aparezca justo debajo del botón */
+    left: 0; /* Alinear a la izquierda del botón */
+    min-width: 200px; /* Ancho mínimo */
+    padding: 10px 0; /* Espaciado vertical interno */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra del dropdown */
+}
+
+/* Estilo para cada enlace en el dropdown */
+.dropdown-content div {
+    margin: 5px 0; /* Margen vertical entre los elementos */
+}
+
+.dropdown-content div a {
+    padding: 10px 20px; /* Espaciado interno para los enlaces del dropdown */
+    font-size: 16px; /* Tamaño de fuente para los enlaces del dropdown */
+    color: #012468; /* Color del texto oscuro en el dropdown */
+    background-color: #dbe1e8; /* Color de fondo claro por defecto */
+    border-radius: 5px; /* Bordes redondeados para los enlaces del dropdown */
+    display: block; /* Hacer que el enlace ocupe todo el ancho del contenedor */
+    text-align: center; /* Centrar texto */
+}
+
+/* Cambiar color en el hover para los enlaces del dropdown */
+.dropdown-content div a:hover {
+    background-color: #7e93b7; /* Fondo oscuro al hacer hover en el dropdown */
+    color: #dbe1e8; /* Texto claro al hacer hover en el dropdown */
+}
+
+/* Mostrar el dropdown al hacer clic */
+.dropdown.show .dropdown-content {
+    display: block; /* Mostrar el dropdown */
+}
+
+/* Responsividad: Menú hamburguesa solo en pantallas pequeñas */
+.menu-icon {
+    display: none;  /* Ocultamos el ícono por defecto */
+}
+
+/* Responsividad: Menú hamburguesa solo en pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .nav {
+        display: none;  /* Ocultamos los enlaces en pantallas pequeñas */
+        flex-direction: column;
+        background-color: #244174; /* Fondo sólido para el menú */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .nav.show {
+        display: flex;  /* Mostramos el menú cuando se hace clic en el icono hamburguesa */
+    }
+
+    /* Mostrar el menú hamburguesa en pantallas pequeñas */
+    .menu-icon {
+        display: block; /* Mostrar el icono hamburguesa */
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+    }
+}

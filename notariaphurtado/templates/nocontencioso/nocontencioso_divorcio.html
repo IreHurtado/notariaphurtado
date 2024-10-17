@@ -1,0 +1,57 @@
+
+{% extends 'general/layout.html' %}
+
+{% block head_title %} No Contencioso {% endblock %}
+{% load static %}
+
+{% block page_title %}
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'estilos/escrituras.css' %}">
+{% endblock %}
+
+{% block page_content %}
+
+<div class="container-escrituras">
+    <!-- Izquierda: Título y Enlaces -->
+    <div class="left-section">
+        <h1>Asuntos No Contenciosos</h1>
+        <div class="box-left">
+            <a href="{% url 'nocontencioso:sucesiones' %}">Sucesión Intestada</a>
+            <a href="{% url 'nocontencioso:rectificacion' %}">Rectificación de Partidas</a>
+            <a href="{% url 'nocontencioso:union' %}">Unión de Hecho</a>
+            <a href="{% url 'nocontencioso:ceseunion' %}">Cese de Unión de Hecho</a>
+            <a href="{% url 'nocontencioso:divorcio' %}">Divorcio</a>
+            <a href="{% url 'nocontencioso:patrimoniofamiliar' %}">Constitución de Patrimonio Familiar</a>
+            <a href="{% url 'nocontencioso:adopcion' %}">Adopción de Personas Capaces</a>
+        </div>
+        <img src="{% static 'images/escrituras-imagen.png' %}" alt="Escrituras Imagen" class="escrituras-image">
+    </div>
+
+    <!-- Derecha: Requisitos -->
+    <div class="right-section">
+        <div class="box-right">
+            <h2>Divorcio</h2>
+            <p class="requisitos-text">
+                <strong>Requisitos</strong><br><br>
+                Se debe presentar a la notaria la solicitud de separación convencional con firma y huella digital de ambos cónyuges, autorizada por abogado y anexar a esta:<br><br>
+                1. Copia simples y legibles de los documentos de identidad de los solicitantes.<br><br>
+                2. Copia certificada del acta o partida de matrimonio de los peticionantes expedida con no más de 3 meses de antigüedad respecto de la fecha de presentación de la solicitud.<br><br>
+                3. Declaración jurada, con firma y huella digital de los peticionantes de no tener hijos menores de edad o mayores con incapacidad.<br><br>
+                4.  De ser el caso, copia certificada del acta de nacimiento del hijo menor de edad o incapaz expedida con no más de tres meses respecto de la fecha de presentación de la solicitud.<br><br>
+                5. De ser el caso, copia certificada de la sentencia judicial firme o acta de conciliación que establezca los regímenes de patria potestad, tenencia, alimentos y visitas, o de curatela, alimentos y vistas en caso de tener hijo menor de edad o mayor de edad con discapacidad.<br><br>
+                6. Testimonio de la escritura pública de separación de patrimonios o de sustitución o liquidación de régimen patrimonial inscrita en los Registros Públicos.<br><br>
+                7. Declaración jurada con firma y huella de los solicitantes de carecer de bienes sujetos al régimen de sociedad de gananciales.<br><br>
+                8. Declaración jurada del último domicilio conyugal, suscrita por ambos y con la huella digital de ambos solicitantes.<br><br>
+                Luego de la audiencia de separación convencional, se contabilizan 60 días naturales para que cualquiera de los cónyuge, sólo uno, presente la minuta de divorcio, firmada por él y autorizada por abogado colegiado.<br><br>
+                
+                
+               
+               
+            </p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

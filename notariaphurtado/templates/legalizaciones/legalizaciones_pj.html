@@ -1,0 +1,58 @@
+
+{% extends 'general/layout.html' %}
+
+{% block head_title %} Legalizaciones {% endblock %}
+{% load static %}
+
+{% block page_title %}
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'estilos/legalizacionlibro.css' %}">
+{% endblock %}
+
+{% block page_content %}
+
+
+<div class="container-escrituras">
+    <!-- Izquierda: Título y Enlaces -->
+    <div class="left-section">
+        <h1>Legalizaciones</h1>
+        <div class="box-left">
+            <a href="{% url 'legalizaciones:firma' %}">De Firmas</a>
+            <a href="{% url 'legalizaciones:pn' %}">De Libros de Persona Natural</a>
+            <a href="{% url 'legalizaciones:pj' %}">De Libros de Persona Jurídica</a>
+            <a href="{% url 'legalizaciones:copias' %}">De Copias</a>
+        </div>
+        <img src="{% static 'images/escrituras-imagen.png' %}" alt="Escrituras Imagen" class="escrituras-image">
+    </div>
+
+    <!-- Derecha: Requisitos -->
+    <div class="right-section">
+        <div class="box-right">
+            <h2>De Libros de Persona Jurídica</h2>
+            <p class="requisitos-text">
+                <strong>Requisitos</strong><br><br>
+                1. Solicitud firmada por el Apoderado o Representante Legal (firma original).<br><br>
+                2. Vigencia de Poder con una antigüedad no mayor a 30 días calendario.<br><br>
+                3. Ficha RUC. <br><br>
+                4. Copia del DNI vigente del Representante Legal o Apoderado. <br><br>
+                5. En el caso de Libro de Actas, Matrícula de Acciones y Padrón de Socios, el Representante Legal o Apoderado deberá ser identificado por medio de la comparación biométrica (Toma de Huella por Biometría). <br><br>
+                ase Legal: Artículos 55 y 116 de la Ley del Notariado. <br><br>
+            </p>
+        </div>
+
+        <div class="box-right">
+            <p class="requisitos-text">
+                <strong>Importante</strong><br><br>
+                - En caso fuera un segundo libro a legalizar, se debe acreditar la conclusión (Adjuntando la primera y la última hoja del libro debidamente culminado) 
+                o pérdida del libro anterior (Denuncia Policial original donde se precise el nombre del libro anterior) (Denuncia Policial original donde se precise el nombre del libro, número, fecha y nombre de la notaría donde se legalizó).<br><br>
+                -  En caso fuera pérdida de Libro de Actas, además de la Denuncia Policial original (Donde se precise el nombre del libro, número, fecha y nombre de la notaría donde se legalizó) se debe presentar el acta de la Junta o Asamblea General en hojas simples donde se informe la pérdida del libro, debiendo contar con la certificación notarial de las firmas de las personas intervinientes. <br><br>
+                - En caso de pérdida de Libros Contables además de la Denuncia Policial original (Donde se precise el nombre del libro, número, fecha y nombre de la notaría donde se legalizó), se debe presentar la carta original presentada a la Sunat. <br><br>
+
+            </p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

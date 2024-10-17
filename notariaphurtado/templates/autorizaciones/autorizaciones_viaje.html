@@ -1,0 +1,54 @@
+
+{% extends 'general/layout.html' %}
+
+{% block head_title %} Autorizaciones de Viaje {% endblock %}
+{% load static %}
+
+{% block page_title %}
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'estilos/autorizaciones.css' %}">
+{% endblock %}
+
+{% block page_content %}
+
+<div class="container-escrituras">
+    <!-- Izquierda: Título y Enlaces -->
+    <div class="left-section">
+        <h1>Autorizaciones de viaje</h1>
+        <div class="box-left">
+            <strong>EXTERIOR:</strong><br><br>
+            Presencia de ambos padres.<br><br>
+            <strong>INTERIOR:</strong><br><br>
+            Presencia de uno de los padres.<br><br>
+        </div>
+        <img src="{% static 'images/escrituras-imagen.png' %}" alt="Escrituras Imagen" class="escrituras-image">
+    </div>
+
+    <!-- Derecha: Requisitos -->
+    <div class="right-section">
+        <div class="box-right">
+            <p class="requisitos-text">
+                <strong>Requisitos:</strong><br><br>
+                1. Documento de Identidad original de los padres, y al día con las votaciones.<br><br>
+                2. Documento de Identidad del menor o Partida de Nacimiento con vigencia no mayor a 30 días de antigüedad.<br><br>
+                3. Itinerario de viaje.<br><br>
+                En el caso que uno de los padres esté en el extranjero, deberá presentar Poder otorgado ante el Consulado Peruano, debidamente legalizado por el Ministerio de Relacione Exteriores e inscrito en el Registro de personas naturales.<br><br>
+                En el caso de tener Poder por Escritura Pública, debe adjuntar una vigencia expedida por SUNARP, no mayor a 30 días de antigüedad.<br><br>
+                En el caso que uno de los padres otorgue la autorización en un notario de provincia, esta deberá estar legalizada, por el Decano del Colegio de Notarios.<br><br>
+                En el caso que uno de los padres haya fallecido, deberá presentar la Partida de Defunción original, no mayor a 30 días de antigüedad.<br><br>
+            </p>
+        </div>
+        <div class="box-right">
+            <p class="requisitos-text">
+                <strong>Para viaje al exterior:</strong><br><br>
+                Indicar Documento de Identidad, nombres y apellidos completos de la persona o personas que se harán responsables del menor durante el viaje o los datos de la aerolínea de transporte internacional a cuyo cargo corre la responsabilidad de su cuidado durante el traslado, si corresponde.<br><br>
+                Indicar Documento de Identidad, nombres y apellidos completos de la persona o personas que se harán responsables del menor durante la estadía fuera del territorio nacional.<br><br>
+            </p>
+        </div>
+    </div>
+    </div>
+</div>
+
+{% endblock %}

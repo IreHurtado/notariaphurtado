@@ -1,0 +1,48 @@
+
+{% extends 'general/layout.html' %}
+
+{% block head_title %} Escrituras {% endblock %}
+{% load static %}
+
+{% block page_title %}
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'estilos/escrituras.css' %}">
+{% endblock %}
+
+{% block page_content %}
+
+<div class="container-escrituras">
+    <!-- Izquierda: Título y Enlaces -->
+    <div class="left-section">
+        <h1>Escrituras Públicas</h1>
+        <div class="box-left">
+            <a href="{% url 'escrituras:compraventa' %}">Compraventa - Donación - Cesión - Transferencia</a>
+            <a href="{% url 'escrituras:poderes' %}">Poderes</a>
+            <a href="{% url 'escrituras:sociedades' %}">Constitución de Sociedades</a>
+            <a href="{% url 'escrituras:hipoteca' %}">Constitución de Hipotecas</a>
+            <a href="{% url 'escrituras:matrimonio' %}">Matrimonio</a>
+        </div>
+        <img src="{% static 'images/escrituras-imagen.png' %}" alt="Escrituras Imagen" class="escrituras-image">
+    </div>
+
+    <!-- Derecha: Requisitos -->
+    <div class="right-section">
+        <div class="box-right">
+            <h2>Constitución de Hipotecas</h2>
+            <p class="requisitos-text">
+                <strong>Requisitos</strong><br><br>
+                CREO QUE ESTÁN MAL
+                1. Solicitud debidamente firmada o minuta suscrita por las partes y autorizada por abogado colegiado.<br><br>
+                2. Proporcionar generales de ley del solicitante o de los contratantes.<br><br>
+                3. Adjuntar fotocopia de documentos de identidad (DNI, CIP, Carnet de Extranjería, Etc.) del solicitante o contratantes.<br><br>
+                4. Cancelar importe de las publicaciones, cuando corresponda.<br><br>
+                5. Adjuntar copias originales de las partidas del Registro Civil que correspondan.<br><br>
+               
+            </p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
